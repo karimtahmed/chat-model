@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="fontawesome-free-5.13.1-web/css/all.min.css" rel="stylesheet"> 
+        <style>
+            form{
+                border-width: 1px;
+                width: 200px;
+                height: 300px;
+                border-style: solid;
+                border-radius: 5px;
+                position: absolute;
+                left: -250px;
+                border-color: #87bdd8;
+            }
+            #b1{
+               margin-left: 50px;
+               margin-top: 10px;
+               
+            }
+            #d1{
+                background-color: #87bdd8;
+                height: 30px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                color: white;
+                padding-top: 10px;
+            }
+            #d2{
+                
+                height: 230px;
+               overflow-y: scroll;
+               
+            }
+            #d3{
+                 background-color: #87bdd8;
+                height: 25px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                color: white;
+                padding-top: 5px;
+                position: fixed;
+                width: 200px;
+            }
+            input{
+                width: 110px;
+                margin-left: 10px;
+                border-radius: 3px;
+            }
+            #b2{
+                display: inline-block;
+                margin-left: 10px;
+                
+            }
+            p{
+                border-style: solid;
+                border-radius: 5px;
+                border-color:  #87bdd8;
+            }
+             i{
+                  font-size: 40px;
+                  position: fixed;
+                  color:  #87bdd8;
+                  top: 300px;
+             }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div id="d1">
+                <b id="b1">CHAT BOX</b>
+            </div>
+            <div id="d2"></div>
+            <div id="d3">
+                <input id="i1" style="display: inline-block;">
+                <b id="b2" >SEND</b>
+            </div>
+            
+        </form>
+        <i id="rr" class="fas fa-comment-dots"></i>
+         <script src="jquery-3.5.1.min.js"></script>
+        <script>
+            $('#b2').click(function(){
+            var text=$('#i1').val();
+            
+           $( '#d2' ).append('<p>'+text+'</p>' );
+            $('#i1').val("");
+            });
+            $('#rr').click(function(){
+               $('form').css('left' , '40px') ;
+               $('form').toggle(1000) ;
+               //message = message + '<p>' + text + '<p>';
+             });  
+            </script>
+    </body>
+</html>
